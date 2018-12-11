@@ -2,9 +2,12 @@ window.onload=function(){
 
 
   document.getElementById("submit").addEventListener("click", function(){
-    var html_to_insert = "<p style=color:" + randColor() + ">"+ shortNote() +"</p>";
-    document.getElementById('notes').innerHTML += html_to_insert;
+    document.getElementById('notes').innerHTML += htmlToInsert();
   });
+
+  function htmlToInsert() {
+    return html_to_insert = "<p style=color:" + randColor() + ">"+ shortNote() +"</p>";
+  }
 
   function randColor() {
     var colors = ['red', 'blue', 'yellow', 'green' ]
